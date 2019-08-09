@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 6a58cf619e4738e4b80bf1e3fb686e39
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - tilePlainGrass: {fileID: 755162880732581011, guid: 277e81099d2e5fa4e8fdf6d14c4fc3a4,
+      type: 3}
+  - tilePlainHedge: {fileID: 7324185485773871852, guid: 192bfdcfbda486b4abaa5aa5e7416dce,
+      type: 3}
+  - tilePlainTree: {fileID: 3491166458265469831, guid: 5708a041f5fda4046a2c503f4042defc,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

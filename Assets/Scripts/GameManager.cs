@@ -1,5 +1,5 @@
 ﻿/**********************************************************************************************************************************************************************************************************************
-* Author:		Brett Roberts
+* Author:		Brett Roberts & Ethan Roberts
 * Filename:		GameManager.cs
 * Date Created: 8/7/2019
 *
@@ -17,6 +17,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager m_instance;
+    public OverworldMap m_overworldMap;
 
     //Map Globals
     public int SIZE_OVERWORLD_X = 5;
@@ -24,8 +25,31 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        m_instance = this;
+        if (m_instance != null && m_instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            m_instance = this;
+        }
+        DontDestroyOnLoad(this);
+
+        //TESTING MAP
+        m_overworldMap = new OverworldMap();
+        int[,] map_test = new int[5, 5]
+        {{1,1,1,1,1},
+         {1,2,2,2,1},
+         {1,2,2,2,1},
+         {1,2,2,2,1},
+         {1,1,1,1,1}};
+        for(int y = 0; y<5; y++)        {
+            for(int x=0; x <5; x++)            {
+                new Location(map_test[x, y]);
+                Debug.Log(m_overworldMap.getTile(x,y).m_id);
+            }
+        }        
     }
 
-    public OverworldMap m_overworldMap;
+    
 }
