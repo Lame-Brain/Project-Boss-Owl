@@ -8,7 +8,7 @@
 * Purpose: Stores global properties and instances for the game such as the Map and Player 
 *
 * Methods:
-*       
+*       void Awake()
 ***********************************************************************************************************************************************************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
@@ -17,7 +17,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager m_instance;
-
     //Map Globals
     public int SIZE_OVERWORLD_X = 5;
     public int SIZE_OVERWORLD_Y = 5;
@@ -41,6 +40,9 @@ public class GameManager : MonoBehaviour
          {1,2,2,2,1},
          {1,2,2,2,1},
          {1,1,1,1,1}};
+
+        MapMaker mMaker = gameObject.AddComponent<MapMaker>();
+        mMaker.MakeMap(map_test);
                 
     }
 
