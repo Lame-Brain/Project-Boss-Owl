@@ -10,7 +10,7 @@ public class MapMaker : MonoBehaviour
     {
         for(int y=0; y < map.GetLength(1); y++)        {
             for(int x = 0; x < map.GetLength(0); x++)            {
-                instantiate
+//                instantiate
             }
         }
     }
