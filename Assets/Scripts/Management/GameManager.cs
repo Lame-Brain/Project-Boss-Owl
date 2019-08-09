@@ -18,8 +18,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager m_instance;
     //Map Globals
-    public int SIZE_OVERWORLD_X = 5;
-    public int SIZE_OVERWORLD_Y = 5;
+    public float SCALE_TILES = 0.32f;
 
     private void Awake()
     {
@@ -35,11 +34,11 @@ public class GameManager : MonoBehaviour
 
         //TESTING MAP
         int[,] map_test = new int[5, 5]
-        {{1,1,1,1,1},
+        {{1,1,1,0,1},
+         {1,0,2,2,1},
+         {1,2,2,0,1},
          {1,2,2,2,1},
-         {1,2,2,2,1},
-         {1,2,2,2,1},
-         {1,1,1,1,1}};
+         {0,1,1,0,1}};
 
         MapMaker mMaker = gameObject.AddComponent<MapMaker>();
         mMaker.MakeMap(map_test);
