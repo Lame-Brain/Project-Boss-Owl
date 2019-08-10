@@ -45,7 +45,7 @@ public class MapMaker : MonoBehaviour
             for (int x = 0; x < map.GetLength(0); ++x)
             {
                 //Places a tile of the type specified by the current array index
-                PlaceTile((MapTileType)map[x,y], x, y);
+                PlaceTile((MapTileType)map[x, y], x, y);
             }
         }
     }

@@ -16,9 +16,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager m_instance;
     //Map Globals
-    public float SCALE_TILES = 0.32f;
+    public float SCALE_TILES = .32f;
+    
+    public static GameManager m_instance;
+
+    public GameObject[] TestObject;
 
     private void Awake()
     {
