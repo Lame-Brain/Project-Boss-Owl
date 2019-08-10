@@ -7,8 +7,10 @@
 *
 * Purpose: Stores global properties and instances for the game such as the Map and Player 
 *
-* Methods:
+* Manager Functions:
 *       void Awake()
+* Methods:
+*       
 ***********************************************************************************************************************************************************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
