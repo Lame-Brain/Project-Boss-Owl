@@ -3,7 +3,7 @@
 * Filename:		GameManager.cs
 * Date Created: 8/7/2019
 *
-* Class: GameManager
+* Class: GameManager (DontDestroyOnLoad)
 *
 * Purpose: Stores global properties and instances for the game such as the Map and Player 
 *
@@ -16,9 +16,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //Map Globals
     public float SCALE_TILES = .32f;
-    
+
+    //Directory Globals
+    public string DIRECTORY_RESOURCE_TILES = "Tiles";
+
     public static GameManager m_instance;
 
     public GameObject[] TestObject;
@@ -35,7 +37,7 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(this);
 
-        //TESTING MAP
+        /********************************************************************************** TESTING MAP *******************************************************************************************************/
         int[,] map_test = new int[5, 5]
         {{1,1,1,0,1},
          {1,0,2,2,1},
@@ -45,8 +47,9 @@ public class GameManager : MonoBehaviour
 
         MapMaker mMaker = gameObject.AddComponent<MapMaker>();
         mMaker.MakeMap(map_test);
-                
+        /********************************************************************************** TESTING MAP *******************************************************************************************************/
+
     }
 
-    
+
 }
