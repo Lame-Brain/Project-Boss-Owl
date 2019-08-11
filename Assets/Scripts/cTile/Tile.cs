@@ -15,7 +15,7 @@ using UnityEngine;
 
 public class Tile: MonoBehaviour
 {
-    public bool m_isBlockedFlying, m_isBlockedGround, m_isWater,  m_isTileSink;
+    public bool m_isBlockedFlying, m_isBlockedGround, m_isWater,  m_isSink, m_isDecorable;
     public double m_damage;
 
 
