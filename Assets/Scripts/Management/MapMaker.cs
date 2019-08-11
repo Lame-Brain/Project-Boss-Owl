@@ -44,12 +44,13 @@ public class MapMaker : MonoBehaviour
     ***********************************************************************************************************************************************************************************************************************/
     public void MakeMap(int[,] map)
     {
-        for (int y = 0; y < map.GetLength(1); ++y)
+        for (int y = map.GetLength(1) - 1; y >= 0; --y)
         {
             for (int x = 0; x < map.GetLength(0); ++x)
             {
                 //Places a tile of the type specified by the current array index
-                Instantiate(m_tiles[map[x, y]], new Vector2(x * GameManager.m_instance.SCALE_TILES, y * GameManager.m_instance.SCALE_TILES), Quaternion.identity);
+                //The y for map is calculated to be as many steps away from 0 as y is steps away from map.Getlength(1)
+                Instantiate(m_tiles[map[x, map.GetLength(1) - (y + 1)]], new Vector2(x * GameManager.m_instance.SCALE_TILES, y * GameManager.m_instance.SCALE_TILES), Quaternion.identity);
             }
         }
     }
