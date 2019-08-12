@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7069805992529976729}
   - component: {fileID: 7069805992529976734}
-  - component: {fileID: -2668875506496543555}
+  - component: {fileID: -8937965850249494124}
   m_Layer: 0
   m_Name: TileWallMasonry
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-2668875506496543555
+--- !u!114 &-8937965850249494124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_isBlockedFlying: 0
-  m_isBlockedGround: 0
+  m_isBlockedGround: 1
   m_isWater: 0
   m_isSink: 0
   m_isDecorable: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5839889758103136797}
   - component: {fileID: 3760929369332563556}
+  - component: {fileID: 1974896898430230903}
   m_Layer: 0
   m_Name: TileLetterY
   m_TagString: Untagged
@@ -81,3 +82,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1974896898430230903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7047371827535580849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ee65ddfcddf764ea2171efeba8902e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_isBlockedFlying: 1
+  m_isBlockedGround: 1
+  m_isWater: 0
+  m_isSink: 0
+  m_isDecorable: 0
+  m_damage: 0

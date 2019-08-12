@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5964358748701860466}
   - component: {fileID: 5964358748701860469}
-  - component: {fileID: -5550516446499903689}
+  - component: {fileID: -3444375566511645370}
   m_Layer: 0
   m_Name: TileRoadSEW
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-5550516446499903689
+--- !u!114 &-3444375566511645370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,8 +94,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ee65ddfcddf764ea2171efeba8902e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockFlyers: 0
-  blockGround: 0
-  isWater: 0
-  sinkTile: 0
-  damage: 0
+  m_isBlockedFlying: 0
+  m_isBlockedGround: 0
+  m_isWater: 0
+  m_isSink: 0
+  m_isDecorable: 0
+  m_damage: 0

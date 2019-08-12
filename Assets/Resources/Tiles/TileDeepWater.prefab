@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5698369808666372181}
   - component: {fileID: 5698369808666372180}
   - component: {fileID: 5698369808666372183}
-  - component: {fileID: 8271183655339474958}
+  - component: {fileID: 4789959685272010331}
   m_Layer: 0
   m_Name: TileDeepWater
   m_TagString: Untagged
@@ -102,7 +102,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8271183655339474958
+--- !u!114 &4789959685272010331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,8 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ee65ddfcddf764ea2171efeba8902e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockFlyers: 0
-  blockGround: 0
-  isWater: 0
-  sinkTile: 0
-  damage: 0
+  m_isBlockedFlying: 0
+  m_isBlockedGround: 1
+  m_isWater: 1
+  m_isSink: 0
+  m_isDecorable: 0
+  m_damage: 0

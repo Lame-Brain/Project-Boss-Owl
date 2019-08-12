@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7958181576370370549}
   - component: {fileID: 7958181576370370548}
-  - component: {fileID: 6318596029352991733}
+  - component: {fileID: -1648308316813320588}
   m_Layer: 0
   m_Name: TileWallWood
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6318596029352991733
+--- !u!114 &-1648308316813320588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_isBlockedFlying: 0
-  m_isBlockedGround: 0
+  m_isBlockedGround: 1
   m_isWater: 0
   m_isSink: 0
   m_isDecorable: 0

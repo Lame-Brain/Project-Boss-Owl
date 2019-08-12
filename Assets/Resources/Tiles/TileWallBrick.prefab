@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1803842176147701535}
   - component: {fileID: 1803842176147701534}
-  - component: {fileID: -8780098402313002108}
+  - component: {fileID: -2434581301556172560}
   m_Layer: 0
   m_Name: TileWallBrick
   m_TagString: Untagged
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-8780098402313002108
+--- !u!114 &-2434581301556172560
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_isBlockedFlying: 0
-  m_isBlockedGround: 0
+  m_isBlockedGround: 1
   m_isWater: 0
   m_isSink: 0
   m_isDecorable: 0

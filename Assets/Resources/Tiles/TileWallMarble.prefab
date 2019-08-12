@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6947882330989935551}
   - component: {fileID: 6947882330989935536}
-  - component: {fileID: -7701119208736914787}
+  - component: {fileID: -3124524696459823042}
   m_Layer: 0
   m_Name: TileWallMarble
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-7701119208736914787
+--- !u!114 &-3124524696459823042
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_isBlockedFlying: 0
-  m_isBlockedGround: 0
+  m_isBlockedGround: 1
   m_isWater: 0
   m_isSink: 0
   m_isDecorable: 0

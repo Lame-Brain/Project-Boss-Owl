@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1100357908690444197}
   - component: {fileID: 1100357908690444202}
-  - component: {fileID: -766786922802530561}
+  - component: {fileID: 7747273778154662974}
   m_Layer: 0
   m_Name: TileCastle
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-766786922802530561
+--- !u!114 &7747273778154662974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,8 +94,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ee65ddfcddf764ea2171efeba8902e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockFlyers: 0
-  blockGround: 0
-  isWater: 0
-  sinkTile: 0
-  damage: 0
+  m_isBlockedFlying: 0
+  m_isBlockedGround: 0
+  m_isWater: 0
+  m_isSink: 0
+  m_isDecorable: 0
+  m_damage: 0

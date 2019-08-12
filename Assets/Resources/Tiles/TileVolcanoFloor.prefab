@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1980453048844798698}
   - component: {fileID: 1980453048844798699}
-  - component: {fileID: 2434980056413955243}
+  - component: {fileID: -5772969020628421110}
   m_Layer: 0
   m_Name: TileVolcanoFloor
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2434980056413955243
+--- !u!114 &-5772969020628421110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

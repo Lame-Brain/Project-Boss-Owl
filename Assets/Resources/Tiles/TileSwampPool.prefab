@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2475321913530865349}
   - component: {fileID: 4018967048692387095}
   - component: {fileID: 4001064368318301075}
+  - component: {fileID: 1572941975306271335}
   m_Layer: 0
   m_Name: TileSwampPool
   m_TagString: Untagged
@@ -92,7 +93,7 @@ Animator:
   m_GameObject: {fileID: 7505232458096438606}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 771be2add3d423e4c9a5f9b762d9e539, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -101,3 +102,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1572941975306271335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7505232458096438606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ee65ddfcddf764ea2171efeba8902e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_isBlockedFlying: 0
+  m_isBlockedGround: 0
+  m_isWater: 0
+  m_isSink: 1
+  m_isDecorable: 0
+  m_damage: 0
