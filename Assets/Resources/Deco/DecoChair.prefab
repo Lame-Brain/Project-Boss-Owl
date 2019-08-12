@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5079557328048279043
+--- !u!1 &6900615424438105560
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,36 +8,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7534890720983234362}
-  - component: {fileID: 6552052550502031516}
+  - component: {fileID: 5824268852132746876}
+  - component: {fileID: 7490806797687197707}
   m_Layer: 0
-  m_Name: DecoSpecial
+  m_Name: DecoChair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7534890720983234362
+--- !u!4 &5824268852132746876
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5079557328048279043}
+  m_GameObject: {fileID: 6900615424438105560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.457404, y: 0.55722946, z: 0.13093548}
+  m_LocalPosition: {x: -1.2459455, y: 1.8290728, z: -0.3509059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6552052550502031516
+--- !u!212 &7490806797687197707
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5079557328048279043}
+  m_GameObject: {fileID: 6900615424438105560}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2699819199210460450, guid: c76b1bb71ce2ff647abbaebbd4a239ea,
+  m_Sprite: {fileID: -569192585374002247, guid: c76b1bb71ce2ff647abbaebbd4a239ea,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
