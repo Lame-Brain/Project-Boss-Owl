@@ -1,11 +1,11 @@
 ﻿/**********************************************************************************************************************************************************************************************************************
 * Author:		Ethan Roberts
 * Filename:		Tile.cs
-* Date Created: 8/10/2019
+* Date Created: 8/13/2019
 *
-* Class: Tile
+* Class: Deco
 *
-* Purpose: Stores information about Tiles that the map is built out of.
+* Purpose: Stores information about Character objects.
 *
 * Methods:
 ***********************************************************************************************************************************************************************************************************************/
@@ -13,10 +13,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tile: MonoBehaviour
+public class Character : MonoBehaviour
 {
-    public bool m_isBlockedFlying, m_isBlockedGround, m_isWater,  m_isShallow, m_isDecorable;
-    public double m_damage;
+    public int m_xCoord, m_yCoord;
+    public bool m_isMoving;
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
-
