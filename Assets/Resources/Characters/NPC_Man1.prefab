@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5350002274997520430}
   - component: {fileID: 6494373894989821225}
   - component: {fileID: 8355644824526882849}
+  - component: {fileID: -6699923660305126836}
   m_Layer: 0
   m_Name: NPC_Man1
   m_TagString: Untagged
@@ -101,3 +102,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6699923660305126836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922902338084375360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e688b24709dc6c549bad2abee16adff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_xCoord: 0
+  m_yCoord: 0
