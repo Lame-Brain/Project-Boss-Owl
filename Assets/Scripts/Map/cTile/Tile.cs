@@ -8,6 +8,8 @@
 * Purpose: Stores scripts, properties, and int tile type for each tile on the map
 *
 * Methods:
+*       void setTileID(int id)
+*           
 ***********************************************************************************************************************************************************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
@@ -17,12 +19,12 @@ public class Tile: MonoBehaviour
 {
     public bool m_isBlockedFlying, m_isBlockedGround, m_isWater,  m_isSink, m_isDecorable;
     public double m_damage;
-    public int m_TileID;
+    public int m_tileID;
 
 
-    public void setID(int id)
+    public void setTileID(int id)
     {
-        this.m_TileID = id;
+        this.m_tileID = id;
     }
 
 }
