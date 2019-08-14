@@ -169,11 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 536f2b14dc3349a46aac60e9f9115a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SCALE_TILES: 0.32
-  DIRECTORY_RESOURCE_TILES: Tiles
-  TestObject:
-  - {fileID: 6022210704655121806, guid: 6427e45c24782a14cbf241555164497e, type: 3}
-  - {fileID: 7466501237298151170, guid: 46ce5fec0ebe560498441fa9dfe9a99f, type: 3}
+  m_mapManager: {fileID: 0}
 --- !u!4 &477665394
 Transform:
   m_ObjectHideFlags: 0
