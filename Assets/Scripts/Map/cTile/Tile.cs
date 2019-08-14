@@ -17,5 +17,16 @@ public class Tile: MonoBehaviour
 {
     public bool m_isBlockedFlying, m_isBlockedGround, m_isWater,  m_isSink, m_isDecorable;
     public double m_damage;
+<<<<<<< HEAD
+=======
+    public int m_TileID;
+
+
+    public void setID(int id)
+    {
+        this.m_TileID = id;
+    }
+
+>>>>>>> 6eb287fbda6a8e1b1d7c9e8eb10c2cd6a9cf4eda
 }
 

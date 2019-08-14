@@ -100,3 +100,4 @@ MonoBehaviour:
   m_isSink: 0
   m_isDecorable: 0
   m_damage: 0
+  m_TileID: 0
