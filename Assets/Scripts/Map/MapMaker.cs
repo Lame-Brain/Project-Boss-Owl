@@ -62,7 +62,8 @@ public class MapMaker : MonoBehaviour
 
                 //Place tile sprite
                 Instantiate(m_tiles[map[x, map.GetLength(1) - (y + 1)].m_spriteID], new Vector2(x * GameManager.SCALE_TILES, y * GameManager.SCALE_TILES), Quaternion.identity);
-                //Place decoration sprite so long as 
+
+                //Place decoration sprite so long as it is not equal to -1 in which case no decoration sprite exists at the index
                 if(map[x, map.GetLength(1) - (y + 1)].m_decoration.m_spriteID != -1)
                 Instantiate(m_decorations[map[x, map.GetLength(1) - (y + 1)].m_decoration.m_spriteID], new Vector2(x * GameManager.SCALE_TILES, y * GameManager.SCALE_TILES), Quaternion.identity);
             }
