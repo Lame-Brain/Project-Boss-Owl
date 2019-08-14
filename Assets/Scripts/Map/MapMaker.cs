@@ -59,7 +59,12 @@ public class MapMaker : MonoBehaviour
             {
                 //Places a tile of the type specified by the current array index
                 //The y for map is calculated to be as many steps away from 0 as y is steps away from map.Getlength(1)
+
+                //Place tile sprite
                 Instantiate(m_tiles[map[x, map.GetLength(1) - (y + 1)].m_spriteID], new Vector2(x * GameManager.SCALE_TILES, y * GameManager.SCALE_TILES), Quaternion.identity);
+                //Place decoration sprite so long as 
+                if(map[x, map.GetLength(1) - (y + 1)].m_decoration.m_spriteID != -1)
+                Instantiate(m_decorations[map[x, map.GetLength(1) - (y + 1)].m_decoration.m_spriteID], new Vector2(x * GameManager.SCALE_TILES, y * GameManager.SCALE_TILES), Quaternion.identity);
             }
         }
     }

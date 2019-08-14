@@ -15,7 +15,6 @@
 *           Constructs and places a map specified by the files
 *       Tile[,] ConstructArray(string tileIDFile, string decoIDFile)
 *           Creates and returns a 2D Tile array built from the files
-*           
 ***********************************************************************************************************************************************************************************************************************/
 
 using System.Collections;
@@ -64,33 +63,46 @@ public class MapManager : MonoBehaviour
     ***********************************************************************************************************************************************************************************************************************/
     public Tile[,] ConstructArray(string tileIDFile, string decoIDFile)
     {
-        string[] fileLines;
-        string[] currLine;
+        string[] tileLines, decoLines, currTileLine, currDecoLine;
         Tile[,] finalArray;
 
-        //Attempt to open the file and if it isn't found throw a custom exception message
+        //Attempt to open the files and if it isn't found throw a custom exception message
         try
         {
-            //Grab all lines
-            fileLines = File.ReadAllLines(GameManager.DIRECTORY_CSV_FILES + tileIDFile);
+            tileLines = File.ReadAllLines(GameManager.DIRECTORY_CSV_FILES + tileIDFile);
         }
         catch
         {
             throw new System.Exception("Could not open the file under" + GameManager.DIRECTORY_CSV_FILES + tileIDFile);
         }
 
-        //Set memory for the returned 2D array before adding to it
-        finalArray = new Tile[fileLines[0].Split(GameManager.FILE_DELIMITER).Length, fileLines.Length];
-        //Go through each line of the file and split it by the delimiter making it into the ith row
-        for(int y = 0; y < fileLines.Length; ++y)
+        try
         {
-            //Split a single line by the delimiter        
-            currLine = fileLines[y].Split(GameManager.FILE_DELIMITER);
-            for (int x = 0; x < fileLines[0].Split(GameManager.FILE_DELIMITER).Length; ++x)
+            decoLines = File.ReadAllLines(GameManager.DIRECTORY_CSV_FILES + decoIDFile);
+        }
+        catch
+        {
+            throw new System.Exception("Could not open the file under" + GameManager.DIRECTORY_CSV_FILES + decoIDFile);
+        }
+
+        //Set memory for the returned 2D array before adding to it
+        finalArray = new Tile[tileLines[0].Split(GameManager.FILE_DELIMITER).Length, tileLines.Length];
+
+        //Go through each line of the file and split it by the delimiter making it into the ith row
+        for(int y = 0; y < tileLines.Length; ++y)
+        {
+            //Split a single line from each file by the delimiter        
+            currTileLine = tileLines[y].Split(GameManager.FILE_DELIMITER);
+            currDecoLine = decoLines[y].Split(GameManager.FILE_DELIMITER);
+
+            for (int x = 0; x < tileLines[0].Split(GameManager.FILE_DELIMITER).Length; ++x)
             {
                 //AddComponent for each tile in the array for allocation and set its location
                 finalArray[x, y] = gameObject.AddComponent<Tile>();
-                finalArray[x, y].m_spriteID = System.Convert.ToInt32(currLine[x]);
+                finalArray[x, y].m_spriteID = System.Convert.ToInt32(currTileLine[x]);
+
+                //AddComponent for each decoration
+                finalArray[x, y].m_decoration.m_spriteID = System.Convert.ToInt32(currDecoLine[x]);
             }
         }
 

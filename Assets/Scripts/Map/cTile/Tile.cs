@@ -22,11 +22,11 @@ public class Tile: MonoBehaviour
     public bool m_isBlockedFlying, m_isBlockedGround, m_isWater,  m_isSink, m_isDecorable;
     public double m_damage;
     public int m_spriteID;
-    public List<Decoration> m_decorations;
+    public Decoration m_decoration;
 
     private void Awake()
     {
-        m_decorations = new List<Decoration>();
+        m_decoration = gameObject.AddComponent<Decoration>();
     }
 
 }
