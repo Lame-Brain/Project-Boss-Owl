@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
 
     //Directory Globals
     public const string DIRECTORY_RESOURCE_TILES = "Tiles";
+    public const string DIRECTORY_RESOURCE_DECORATIONS = "Decos";
     public const string DIRECTORY_CSV_FILES = "Assets/Resources/Files/";
 
     /******* Const Globals ******/
@@ -35,20 +36,17 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         if (m_instance != null && m_instance != this)
-        {
             Destroy(this.gameObject);
-        }
         else
-        {
             m_instance = this;
-        }
+
         DontDestroyOnLoad(this);
 
         //Allocation of components
         m_mapManager = gameObject.AddComponent<MapManager>();
 
         //Testing Map
-        m_mapManager.BuildMap("OverworldTileID.csv");
+        m_mapManager.BuildMap("OverworldTileID.csv", "OverworldDecorationID.csv");
     }
 
 

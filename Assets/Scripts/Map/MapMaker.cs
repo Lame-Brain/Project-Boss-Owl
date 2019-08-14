@@ -11,7 +11,7 @@
 *       void Awake()
 *           Loads prefab folder into GameObject array and sets their IDs
 * Methods:
-*       void PlaceMap(int[,] map)
+*       void PlaceMap(Tile[,] map)
 *           Calls place tile for each element of the array
 ***********************************************************************************************************************************************************************************************************************/
 using System.Collections;
@@ -23,15 +23,22 @@ using UnityEngine;
 public class MapMaker : MonoBehaviour
 {
     private GameObject[] m_tiles;
+    private GameObject[] m_decorations;
 
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
 
-        //Load all Tiles into m_tiles as GameObjects
+        //Load all Tiles and Decorations
         m_tiles = Resources.LoadAll(GameManager.DIRECTORY_RESOURCE_TILES, typeof(GameObject)).Cast<GameObject>().ToArray();
-        for(int i = 0; i < m_tiles.Length; ++i)
-            m_tiles[i].GetComponent<Tile>().setTileID(i);
+        m_decorations = Resources.LoadAll(GameManager.DIRECTORY_RESOURCE_DECORATIONS, typeof(GameObject)).Cast<GameObject>().ToArray();
+
+        //Set the ID of each GameObject for reference within Unity
+        for (int i = 0; i < m_tiles.Length; ++i)
+            m_tiles[i].GetComponent<Tile>().m_spriteID = i;
+
+        for (int i = 0; i < m_decorations.Length; ++i)
+            m_decorations[i].GetComponent<Decoration>().m_spriteID = i;
     }
 
     /**********************************************************************************************************************************************************************************************************************
@@ -44,7 +51,7 @@ public class MapMaker : MonoBehaviour
     * Postcondition:
     *   The array is outputted as a map to the screen
     ***********************************************************************************************************************************************************************************************************************/
-    public void PlaceMap(int[,] map)
+    public void PlaceMap(Tile[,] map)
     {
         for (int y = map.GetLength(1) - 1; y >= 0; --y)
         {
@@ -52,7 +59,7 @@ public class MapMaker : MonoBehaviour
             {
                 //Places a tile of the type specified by the current array index
                 //The y for map is calculated to be as many steps away from 0 as y is steps away from map.Getlength(1)
-                Instantiate(m_tiles[map[x, map.GetLength(1) - (y + 1)]], new Vector2(x * GameManager.SCALE_TILES, y * GameManager.SCALE_TILES), Quaternion.identity);
+                Instantiate(m_tiles[map[x, map.GetLength(1) - (y + 1)].m_spriteID], new Vector2(x * GameManager.SCALE_TILES, y * GameManager.SCALE_TILES), Quaternion.identity);
             }
         }
     }

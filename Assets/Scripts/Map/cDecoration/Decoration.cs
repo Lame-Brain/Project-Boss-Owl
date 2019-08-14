@@ -18,4 +18,5 @@ public class Decoration : MonoBehaviour
     //These values are used to override the values on Tile, if they are present.
     public bool m_isBlockedFlying, m_isBlockedGround, m_isWater, m_isShallow, m_isDecorable;
     public double m_damage, m_addDamage;
+    public int m_spriteID;
 }

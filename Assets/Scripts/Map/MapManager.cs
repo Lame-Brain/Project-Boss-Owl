@@ -5,16 +5,16 @@
 *
 * Class: MapManager (DontDestroyOnLoad)
 *
-* Purpose: Constructs a 2D array from the CSV file specified by GameManager and passes it to MapMaker to place the map on-screen
+* Purpose: Constructs a 2D array from the files specified by GameManager and passes it to MapMaker to place the map on-screen
 *
 * Manager Functions:
 *       void Awake()
 *       
 * Methods:
-*       void BuildMap(string csvFile)
-*           Constructs and places a map specified by the csvFile
-*       int[,] ConstructArray(string csvFile)
-*           Creates and returns a 2D array built from the csvFile
+*       void BuildMap(string tileIDFile, string decoIDFile)
+*           Constructs and places a map specified by the files
+*       Tile[,] ConstructArray(string tileIDFile, string decoIDFile)
+*           Creates and returns a 2D Tile array built from the files
 *           
 ***********************************************************************************************************************************************************************************************************************/
 
@@ -36,18 +36,18 @@ public class MapManager : MonoBehaviour
 
     /**********************************************************************************************************************************************************************************************************************
     * Purpose: 
-    *   Builds a 2D array from the given csvFile and passes it to m_mapMaker for placement
+    *   Builds a 2D array from the given files and passes it to m_mapMaker for placement
     * 
     * Precondition: 
-    *   The GameManager has detected a change in the map is needed and has passed the proper map csv to its MapManager
+    *   The GameManager has detected a change in the map is needed and has passed the proper map csv files to its MapManager
     * 
     * Postcondition:
     *    A map is created and placed via the ConstructedArray
     ***********************************************************************************************************************************************************************************************************************/
-    public void BuildMap(string csvFile)
+    public void BuildMap(string tileIDFile, string decoIDFile)
     {
 
-        m_mapMaker.PlaceMap(ConstructArray(csvFile));
+        m_mapMaker.PlaceMap(ConstructArray(tileIDFile, decoIDFile));
     }
 
     /**********************************************************************************************************************************************************************************************************************
@@ -58,37 +58,40 @@ public class MapManager : MonoBehaviour
     *   BuildMap has been called from the GameManager
     * 
     * Postcondition:
-    *   If the csvFile is inaccessible or does not exist and exception is thrown
-    *   Otherwise, a 2D array that mimics the passed in csvFile is returned
+    *   If any files are inaccessible or does not exist and exception is thrown
+    *   Otherwise, a 2D array of Tiles that mimic the passed in files is returned
     *   
     ***********************************************************************************************************************************************************************************************************************/
-    public int[,] ConstructArray(string csvFile)
+    public Tile[,] ConstructArray(string tileIDFile, string decoIDFile)
     {
         string[] fileLines;
         string[] currLine;
-        int[,] finalArray;
+        Tile[,] finalArray;
+
         //Attempt to open the file and if it isn't found throw a custom exception message
         try
         {
             //Grab all lines
-            fileLines = File.ReadAllLines(GameManager.DIRECTORY_CSV_FILES + csvFile);
-            File.Open(GameManager.DIRECTORY_CSV_FILES + csvFile, FileMode.Open);
+            fileLines = File.ReadAllLines(GameManager.DIRECTORY_CSV_FILES + tileIDFile);
         }
         catch
         {
-            throw new System.Exception("Could not open the file under" + GameManager.DIRECTORY_CSV_FILES + csvFile);
+            throw new System.Exception("Could not open the file under" + GameManager.DIRECTORY_CSV_FILES + tileIDFile);
         }
 
         //Set memory for the returned 2D array before adding to it
-        finalArray = new int[fileLines[0].Split(GameManager.FILE_DELIMITER).Length, fileLines.Length];
-
+        finalArray = new Tile[fileLines[0].Split(GameManager.FILE_DELIMITER).Length, fileLines.Length];
         //Go through each line of the file and split it by the delimiter making it into the ith row
         for(int y = 0; y < fileLines.Length; ++y)
         {
             //Split a single line by the delimiter        
             currLine = fileLines[y].Split(GameManager.FILE_DELIMITER);
-            for(int x = 0; x < fileLines[0].Split(GameManager.FILE_DELIMITER).Length; ++x)
-                finalArray[x, y] = System.Convert.ToInt32(currLine[x]);
+            for (int x = 0; x < fileLines[0].Split(GameManager.FILE_DELIMITER).Length; ++x)
+            {
+                //AddComponent for each tile in the array for allocation and set its location
+                finalArray[x, y] = gameObject.AddComponent<Tile>();
+                finalArray[x, y].m_spriteID = System.Convert.ToInt32(currLine[x]);
+            }
         }
 
         return finalArray;
