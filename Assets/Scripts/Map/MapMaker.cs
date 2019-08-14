@@ -29,7 +29,7 @@ public class MapMaker : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         //Load all Tiles into m_tiles as GameObjects
-        m_tiles = Resources.LoadAll(GameManager.m_instance.DIRECTORY_RESOURCE_TILES, typeof(GameObject)).Cast<GameObject>().ToArray();
+        m_tiles = Resources.LoadAll(GameManager.DIRECTORY_RESOURCE_TILES, typeof(GameObject)).Cast<GameObject>().ToArray();
     }
 
     /**********************************************************************************************************************************************************************************************************************
@@ -50,7 +50,7 @@ public class MapMaker : MonoBehaviour
             {
                 //Places a tile of the type specified by the current array index
                 //The y for map is calculated to be as many steps away from 0 as y is steps away from map.Getlength(1)
-                Instantiate(m_tiles[map[x, map.GetLength(1) - (y + 1)]], new Vector2(x * GameManager.m_instance.SCALE_TILES, y * GameManager.m_instance.SCALE_TILES), Quaternion.identity);
+                Instantiate(m_tiles[map[x, map.GetLength(1) - (y + 1)]], new Vector2(x * GameManager.SCALE_TILES, y * GameManager.SCALE_TILES), Quaternion.identity);
             }
         }
     }

@@ -71,23 +71,23 @@ public class MapManager : MonoBehaviour
         try
         {
             //Grab all lines
-            fileLines = File.ReadAllLines(GameManager.m_instance.DIRECTORY_CSV_FILES + csvFile);
-            File.Open(GameManager.m_instance.DIRECTORY_CSV_FILES + csvFile, FileMode.Open);
+            fileLines = File.ReadAllLines(GameManager.DIRECTORY_CSV_FILES + csvFile);
+            File.Open(GameManager.DIRECTORY_CSV_FILES + csvFile, FileMode.Open);
         }
         catch
         {
-            throw new System.Exception("Could not open the file under" + GameManager.m_instance.DIRECTORY_CSV_FILES + csvFile);
+            throw new System.Exception("Could not open the file under" + GameManager.DIRECTORY_CSV_FILES + csvFile);
         }
 
         //Set memory for the returned 2D array before adding to it
-        finalArray = new int[fileLines[0].Split(GameManager.m_instance.FILE_DELIMITER).Length, fileLines.Length];
+        finalArray = new int[fileLines[0].Split(GameManager.FILE_DELIMITER).Length, fileLines.Length];
 
         //Go through each line of the file and split it by the delimiter making it into the ith row
         for(int y = 0; y < fileLines.Length; ++y)
         {
             //Split a single line by the delimiter        
-            currLine = fileLines[y].Split(GameManager.m_instance.FILE_DELIMITER);
-            for(int x = 0; x < fileLines[0].Split(GameManager.m_instance.FILE_DELIMITER).Length; ++x)
+            currLine = fileLines[y].Split(GameManager.FILE_DELIMITER);
+            for(int x = 0; x < fileLines[0].Split(GameManager.FILE_DELIMITER).Length; ++x)
             {
                 finalArray[x, y] = System.Convert.ToInt32(currLine[x]);
             }
