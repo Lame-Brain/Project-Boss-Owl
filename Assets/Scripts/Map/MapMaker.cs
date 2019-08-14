@@ -11,7 +11,7 @@
 *       void Awake()
 *           Loads prefab folder into GameObject array
 * Methods:
-*       void MakeMap(int[,] map)
+*       void PlaceMap(int[,] map)
 *           Calls place tile for each element of the array
 ***********************************************************************************************************************************************************************************************************************/
 using System.Collections;
@@ -42,7 +42,7 @@ public class MapMaker : MonoBehaviour
     * Postcondition:
     *   The array is outputted as a map to the screen
     ***********************************************************************************************************************************************************************************************************************/
-    public void MakeMap(int[,] map)
+    public void PlaceMap(int[,] map)
     {
         for (int y = map.GetLength(1) - 1; y >= 0; --y)
         {

@@ -18,14 +18,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    /******* Const Globals ******/
     public float SCALE_TILES = .32f;
+
+    public char FILE_DELIMITER = '|';
 
     //Directory Globals
     public string DIRECTORY_RESOURCE_TILES = "Tiles";
+    public string DIRECTORY_CSV_FILES = "Assets/Resources/Files/";
+
+    /******* Const Globals ******/
 
     public static GameManager m_instance;
-
-    public GameObject[] TestObject;
+    public MapManager m_mapManager;
 
     private void Awake()
     {
@@ -39,18 +44,11 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(this);
 
-        /********************************************************************************** TESTING MAP *******************************************************************************************************/
-        int[,] map_test = new int[5, 5]
-        {{1,1,1,0,1},
-         {1,0,2,2,1},
-         {1,2,2,0,1},
-         {1,2,2,2,1},
-         {0,1,1,0,1}};
+        //Allocation of components
+        m_mapManager = gameObject.AddComponent<MapManager>();
 
-        MapMaker mMaker = gameObject.AddComponent<MapMaker>();
-        mMaker.MakeMap(map_test);
-        /********************************************************************************** TESTING MAP *******************************************************************************************************/
-
+        //Testing Map
+        m_mapManager.BuildMap("OverworldTileID.csv");
     }
 
 

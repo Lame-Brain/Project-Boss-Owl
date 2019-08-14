@@ -5,7 +5,7 @@
 *
 * Class: Tile
 *
-* Purpose: Stores information about Tiles that the map is built out of.
+* Purpose: Stores scripts, properties, and int tile type for each tile on the map
 *
 * Methods:
 ***********************************************************************************************************************************************************************************************************************/
@@ -15,8 +15,9 @@ using UnityEngine;
 
 public class Tile: MonoBehaviour
 {
-    public bool m_isBlockedFlying, m_isBlockedGround, m_isWater,  m_isShallow, m_isDecorable;
+    public bool m_isBlockedFlying, m_isBlockedGround, m_isWater,  m_isSink, m_isDecorable;
     public double m_damage;
+
 
 }
 
