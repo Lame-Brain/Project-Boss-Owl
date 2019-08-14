@@ -88,9 +88,7 @@ public class MapManager : MonoBehaviour
             //Split a single line by the delimiter        
             currLine = fileLines[y].Split(GameManager.FILE_DELIMITER);
             for(int x = 0; x < fileLines[0].Split(GameManager.FILE_DELIMITER).Length; ++x)
-            {
                 finalArray[x, y] = System.Convert.ToInt32(currLine[x]);
-            }
         }
 
         return finalArray;
