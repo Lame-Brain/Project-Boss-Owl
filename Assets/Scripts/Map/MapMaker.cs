@@ -9,7 +9,7 @@
 *
 * Manager Functions:
 *       void Awake()
-*           Loads prefab folder into GameObject array
+*           Loads prefab folder into GameObject array and sets their IDs
 * Methods:
 *       void PlaceMap(int[,] map)
 *           Calls place tile for each element of the array
@@ -31,9 +31,7 @@ public class MapMaker : MonoBehaviour
         //Load all Tiles into m_tiles as GameObjects
         m_tiles = Resources.LoadAll(GameManager.DIRECTORY_RESOURCE_TILES, typeof(GameObject)).Cast<GameObject>().ToArray();
         for(int i = 0; i < m_tiles.Length; ++i)
-        {
             m_tiles[i].GetComponent<Tile>().setTileID(i);
-        }
     }
 
     /**********************************************************************************************************************************************************************************************************************
