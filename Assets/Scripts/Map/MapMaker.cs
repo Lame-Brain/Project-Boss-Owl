@@ -30,6 +30,10 @@ public class MapMaker : MonoBehaviour
 
         //Load all Tiles into m_tiles as GameObjects
         m_tiles = Resources.LoadAll(GameManager.m_instance.DIRECTORY_RESOURCE_TILES, typeof(GameObject)).Cast<GameObject>().ToArray();
+        for(int n = 0; n < m_tiles.Length; n++)
+        {
+            m_tiles[n].GetComponent<Tile>().setID(n);
+        }
     }
 
     /**********************************************************************************************************************************************************************************************************************
