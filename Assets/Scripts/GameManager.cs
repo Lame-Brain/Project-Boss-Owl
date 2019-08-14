@@ -19,13 +19,13 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     /******* Const Globals ******/
-    public float SCALE_TILES = .32f;
+    public const float SCALE_TILES = .32f;
 
-    public char FILE_DELIMITER = '|';
+    public const char FILE_DELIMITER = '|';
 
     //Directory Globals
-    public string DIRECTORY_RESOURCE_TILES = "Tiles";
-    public string DIRECTORY_CSV_FILES = "Assets/Resources/Files/";
+    public const string DIRECTORY_RESOURCE_TILES = "Tiles";
+    public const string DIRECTORY_CSV_FILES = "Assets/Resources/Files/";
 
     /******* Const Globals ******/
 
