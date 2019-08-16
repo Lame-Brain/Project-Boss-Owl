@@ -33,12 +33,6 @@ public class MapMaker : MonoBehaviour
         m_tiles = Resources.LoadAll(GameManager.DIRECTORY_RESOURCE_TILES, typeof(GameObject)).Cast<GameObject>().ToArray();
         m_decorations = Resources.LoadAll(GameManager.DIRECTORY_RESOURCE_DECORATIONS, typeof(GameObject)).Cast<GameObject>().ToArray();
 
-        //Set the ID of each GameObject for reference within Unity
-        for (int i = 0; i < m_tiles.Length; ++i)
-            m_tiles[i].GetComponent<Tile>().m_spriteID = i;
-
-        for (int i = 0; i < m_decorations.Length; ++i)
-            m_decorations[i].GetComponent<Decoration>().m_spriteID = i;
     }
 
     /**********************************************************************************************************************************************************************************************************************
