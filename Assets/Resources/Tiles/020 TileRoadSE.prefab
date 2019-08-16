@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9045317415107602096}
   - component: {fileID: 5387559787534847211}
+  - component: {fileID: -1807009112828409047}
   m_Layer: 0
   m_Name: 20 TileRoadSE
   m_TagString: Untagged
@@ -81,3 +82,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-1807009112828409047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820256645429754343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ee65ddfcddf764ea2171efeba8902e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_isBlockedFlying: 0
+  m_isBlockedGround: 0
+  m_isWater: 0
+  m_isSink: 0
+  m_isDecorable: 0
+  m_damage: 0
+  m_spriteID: 0
+  m_decoration: {fileID: 0}
