@@ -22,7 +22,7 @@ public class Tile: MonoBehaviour
     public bool m_isBlockedFlying, m_isBlockedGround, m_isWater,  m_isSink, m_isDecorable;
     public double m_damage;
     public int m_spriteID;
-    public Decoration m_decoration;
+    public Decoration m_decoration { get; set; }
 
     private void Awake()
     {
