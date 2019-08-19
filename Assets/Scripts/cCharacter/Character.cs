@@ -23,14 +23,23 @@ public class Character : MonoBehaviour
     private bool m_isMoving = false;
     public Animator m_animator;
 
+    //Character Stats
+    int m_currHealth, m_maxHealth;
+    int m_currStr, m_maxStr;
+    int m_currDex, m_maxDex;
+    int m_currCon, m_maxCon;
+    int m_currIQ, m_maxIQ;
+    int m_currWis, m_maxWis;
+
+
     // Start is called before the first frame update
-    void Start()
+    virtual protected void Start()
     {
         m_animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
+    virtual protected void Update()
     {
         m_animator.SetBool("isMoving", m_isMoving);
     }

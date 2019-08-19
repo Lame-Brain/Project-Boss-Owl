@@ -27,11 +27,19 @@ public class GameManager : MonoBehaviour
     public const string DIRECTORY_RESOURCE_TILES = "Tiles";
     public const string DIRECTORY_RESOURCE_DECORATIONS = "Decos";
     public const string DIRECTORY_CSV_FILES = "Assets/Resources/Files/";
-
     /******* Const Globals ******/
 
     public static GameManager m_instance;
     public MapManager m_mapManager;
+
+    public enum GAME_STATE
+    {
+        OVERWORLD,
+        UNDERWORLD,
+        COMBAT
+    }
+
+    public static GAME_STATE m_gameState;
 
     private void Awake()
     {
