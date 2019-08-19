@@ -12,6 +12,7 @@
 *   Update()
 * 
 * Methods:
+*   
 ***********************************************************************************************************************************************************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public int m_xCoord, m_yCoord;
+    private Vector2 m_pos, m_nextPos;
     private bool m_isMoving = false;
     public Animator m_animator;
 
@@ -41,6 +42,7 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     virtual protected void Update()
     {
-        m_animator.SetBool("isMoving", m_isMoving);
+        if(m_pos != m_nextPos)
+            m_animator.SetBool("isMoving", m_isMoving);
     }
 }
