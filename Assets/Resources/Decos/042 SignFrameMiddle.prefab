@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5802124182551890092}
   - component: {fileID: 729585512132084682}
   m_Layer: 0
-  m_Name: 43 SignFrameMiddle
+  m_Name: 042 SignFrameMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1404738675593987555, guid: c76b1bb71ce2ff647abbaebbd4a239ea,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -102,6 +102,6 @@ MonoBehaviour:
   m_addIsSolid: 0
   m_addIsShallow: 0
   addIsNotShallow: 0
-  m_damage: 0
+  m_cancelTileDamage: 0
   m_addDamage: 0
   m_spriteID: 0

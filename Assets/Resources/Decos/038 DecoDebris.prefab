@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8415898544532333582}
   - component: {fileID: -7909887750388767366}
   m_Layer: 0
-  m_Name: 39 DecoDebris
+  m_Name: 038 DecoDebris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -558698931063506333, guid: c76b1bb71ce2ff647abbaebbd4a239ea,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -94,11 +94,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e70a70ea688d0db4fb209ccac5b3993a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_isBlockedFlying: 0
-  m_isBlockedGround: 0
-  m_isWater: 0
-  m_isShallow: 0
-  m_isDecorable: 0
-  m_damage: 0
+  m_addBlockFlyers: 0
+  m_addUnblockFlyers: 0
+  m_addBlockGround: 0
+  m_addUnblockGround: 0
+  m_addIsWater: 0
+  m_addIsSolid: 0
+  m_addIsShallow: 0
+  addIsNotShallow: 0
+  m_cancelTileDamage: 0
   m_addDamage: 0
   m_spriteID: 0
