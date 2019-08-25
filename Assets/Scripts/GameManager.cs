@@ -57,7 +57,8 @@ public class GameManager : MonoBehaviour
         m_player = gameObject.AddComponent<Player>();
 
         //Testing Map
-        m_mapManager.BuildMap("OverworldTileID.csv", "OverworldDecoID.csv");
+        //m_mapManager.BuildMap("OverworldTileID.csv", "OverworldDecoID.csv");
+        m_mapManager.BuildMap("DunjonTiles.csv", "DunjonDeco.csv");
     }
 
     private void Update()
