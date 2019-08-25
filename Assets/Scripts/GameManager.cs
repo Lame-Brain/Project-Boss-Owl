@@ -9,6 +9,7 @@
 *
 * Manager Functions:
 *       void Awake()
+*       void Update()
 * Methods:
 *       
 ***********************************************************************************************************************************************************************************************************************/
@@ -30,7 +31,8 @@ public class GameManager : MonoBehaviour
     /******* Const Globals ******/
 
     public static GameManager m_instance;
-    public MapManager m_mapManager;
+    private MapManager m_mapManager;
+    public Player m_player;
 
     public enum GAME_STATE
     {
@@ -52,10 +54,31 @@ public class GameManager : MonoBehaviour
 
         //Allocation of components
         m_mapManager = gameObject.AddComponent<MapManager>();
+        m_player = gameObject.AddComponent<Player>();
 
         //Testing Map
         m_mapManager.BuildMap("OverworldTileID.csv", "OverworldDecoID.csv");
     }
 
-
+    private void Update()
+    {
+        /******* Temp Code to Move Player ******/
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            m_player.Move(Character.Move_Direction.UP);
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            m_player.Move(Character.Move_Direction.DOWN);
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            m_player.Move(Character.Move_Direction.LEFT);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            m_player.Move(Character.Move_Direction.RIGHT);
+        }
+        /******* End Temp Code to Move Player ******/
+    }
 }
