@@ -98,10 +98,10 @@ public class MapManager : MonoBehaviour
             {
                 //AddComponent for each tile in the array for allocation and set its location
                 finalArray[x, y] = gameObject.AddComponent<Tile>();
-                finalArray[x, y].m_spriteID = System.Convert.ToInt32(currTileLine[x]);
+                finalArray[x, y]._tileSpriteId = System.Convert.ToInt32(currTileLine[x]);
 
                 //AddComponent for each decoration
-                finalArray[x, y].m_decoration.m_spriteID = System.Convert.ToInt32(currDecoLine[x]);
+                finalArray[x, y].DecoratorSpriteId = System.Convert.ToInt32(currDecoLine[x]);
             }
         }
 

@@ -135,12 +135,12 @@ PrefabInstance:
     - target: {fileID: 5362838316632615397, guid: 526036fa37175ea43946c199a6d8f6df,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.383
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5362838316632615397, guid: 526036fa37175ea43946c199a6d8f6df,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.797
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5362838316632615397, guid: 526036fa37175ea43946c199a6d8f6df,
         type: 3}
@@ -150,17 +150,17 @@ PrefabInstance:
     - target: {fileID: 5362838316632615397, guid: 526036fa37175ea43946c199a6d8f6df,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5362838316632615397, guid: 526036fa37175ea43946c199a6d8f6df,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5362838316632615397, guid: 526036fa37175ea43946c199a6d8f6df,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5362838316632615397, guid: 526036fa37175ea43946c199a6d8f6df,
         type: 3}
@@ -170,7 +170,7 @@ PrefabInstance:
     - target: {fileID: 5362838316632615397, guid: 526036fa37175ea43946c199a6d8f6df,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5362838316632615397, guid: 526036fa37175ea43946c199a6d8f6df,
         type: 3}
@@ -263,8 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 536f2b14dc3349a46aac60e9f9115a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_mapManager: {fileID: 0}
-  m_player: {fileID: 97296959}
+  m_player: {fileID: 97296958}
 --- !u!4 &477665394
 Transform:
   m_ObjectHideFlags: 0
@@ -277,7 +276,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1598521452
 GameObject:
@@ -289,7 +288,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1598521455}
   - component: {fileID: 1598521454}
-  - component: {fileID: 1598521453}
   - component: {fileID: 1598521456}
   m_Layer: 0
   m_Name: Main Camera
@@ -298,14 +296,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1598521453
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598521452}
-  m_Enabled: 1
 --- !u!20 &1598521454
 Camera:
   m_ObjectHideFlags: 0
