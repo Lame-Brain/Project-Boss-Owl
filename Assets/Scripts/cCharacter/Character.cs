@@ -29,7 +29,7 @@ public class Character : MonoBehaviour
         RIGHT
     }
 
-    private Vector2 m_pos, m_nextPos;
+    protected Vector2 m_pos, m_nextPos;
     private bool m_isMoving = false;
     public Animator m_animator;
 
@@ -51,8 +51,9 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     virtual protected void Update()
     {
-        if(m_pos != m_nextPos)
-            m_animator.SetBool("isMoving", m_isMoving);
+        //if(m_pos != m_nextPos)
+        //    m_animator.SetBool("isMoving", m_isMoving);
+        //transform.position = m_pos;
     }
 
     /**********************************************************************************************************************************************************************************************************************
@@ -67,26 +68,11 @@ public class Character : MonoBehaviour
     ***********************************************************************************************************************************************************************************************************************/
     virtual public void Move(Move_Direction mvDir)
     {
-        Vector2 destination = m_pos;
+        MoveChar(mvDir);
+    }
 
-        switch(mvDir)
-        {
-            case Move_Direction.UP:
-                destination = new Vector2(m_pos.x, m_pos.y + 1);
-                break;
-            case Move_Direction.DOWN:
-                destination = new Vector2(m_pos.x, m_pos.y - 1);
-                break;
-            case Move_Direction.LEFT:
-                destination = new Vector2(m_pos.x + 1, m_pos.y);
-                break;
-            case Move_Direction.RIGHT:
-                destination = new Vector2(m_pos.x + 1, m_pos.y);
-                break;
-            default:
-                throw new System.Exception("Move direction was outside of the bounds of enumeration \"Move_Direction\"");
+    virtual protected void MoveChar(Move_Direction mvDir)
+    {
 
-        }
-        m_pos = destination;
     }
 }

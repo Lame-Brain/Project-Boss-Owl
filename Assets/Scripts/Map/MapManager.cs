@@ -45,7 +45,6 @@ public class MapManager : MonoBehaviour
     ***********************************************************************************************************************************************************************************************************************/
     public void BuildMap(string tileIDFile, string decoIDFile)
     {
-
         m_mapMaker.PlaceMap(ConstructArray(tileIDFile, decoIDFile));
     }
 

@@ -16,7 +16,7 @@ using UnityEngine;
 public class Decoration : MonoBehaviour
 {
     //These values are used to override the values on Tile, if they are present.
-    public bool m_addBlockFlyers, m_addUnblockFlyers, m_addBlockGround, m_addUnblockGround, m_addIsWater, m_addIsSolid, m_addIsShallow, addIsNotShallow, m_cancelTileDamage;
+    public bool m_addBlockFlyers, m_addUnblockFlyers, m_addBlockGround, m_addUnblockGround, m_addIsWater, m_addIsSolid, m_addIsShallow, m_addIsNotShallow, m_cancelTileDamage;
     public double m_addDamage;
     public int m_spriteID;
 }

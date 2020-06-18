@@ -27,7 +27,29 @@ public class Player : Character
 
     override protected void Update()
     {
-        base.Update();
+        GameManager.m_instance.m_player.transform.position = m_pos;
+        Debug.Log("Name of Obj: " + gameObject.name + " and X of Obj: " + transform.position.x);
     }
 
+    override protected void MoveChar(Move_Direction mvDir)
+    {
+        switch (mvDir)
+        {
+            case Move_Direction.UP:
+                m_pos = new Vector2(m_pos.x, m_pos.y + 1);
+                break;
+            case Move_Direction.DOWN:
+                m_pos = new Vector2(m_pos.x, m_pos.y - 1);
+                break;
+            case Move_Direction.LEFT:
+                m_pos = new Vector2(m_pos.x - 1, m_pos.y);
+                break;
+            case Move_Direction.RIGHT:
+                m_pos = new Vector2(m_pos.x + 1, m_pos.y);
+                break;
+            default:
+                throw new System.Exception("Move direction was outside of the bounds of enumeration \"Move_Direction\"");
+
+        }
+    }
 }
