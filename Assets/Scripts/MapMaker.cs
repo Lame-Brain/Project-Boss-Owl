@@ -58,8 +58,8 @@ public class MapMaker : MonoBehaviour
                 Instantiate(m_tiles[map[x, map.GetLength(1) - (y + 1)].TileSpriteId], new Vector2(x * GameManager.SCALE_TILES, y * GameManager.SCALE_TILES), Quaternion.identity);
 
                 //Place decoration sprite so long as it is not equal to -1 in which case no decoration sprite exists at the index
-                if(map[x, map.GetLength(1) - (y + 1)].DecoratorSpriteId != -1)
-                Instantiate(m_decorations[map[x, map.GetLength(1) - (y + 1)].DecoratorSpriteId], new Vector2(x * GameManager.SCALE_TILES, y * GameManager.SCALE_TILES), Quaternion.identity);
+                //if(map[x, map.GetLength(1) - (y + 1)].DecoratorSpriteId != -1)
+                //Instantiate(m_decorations[map[x, map.GetLength(1) - (y + 1)].DecoratorSpriteId], new Vector2(x * GameManager.SCALE_TILES, y * GameManager.SCALE_TILES), Quaternion.identity);
             }
         }
     }

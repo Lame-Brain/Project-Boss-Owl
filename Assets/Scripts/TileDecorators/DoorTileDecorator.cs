@@ -28,7 +28,7 @@ public class DoorTileDecorator : TileDecorator
 
     private void Awake()
     {
-        _isClosed = false;    
+        _isClosed = false;
     }
 
     public override bool IsBlockedGround
@@ -36,21 +36,30 @@ public class DoorTileDecorator : TileDecorator
         get { return _isClosed; }
     }
 
+    public override int DecoratorSpriteId
+    {
+        get
+        {
+            //Return the closed door sprite id
+            if (_isClosed)
+            {
+                return -1;
+            }
+            //Return the open door sprite id
+            else
+            {
+                return -1;
+            }
+        }
+    }
+
     public void Open()
     {
-        if (_isClosed)
-        {
-            _isClosed = false;
-            //Change sprite
-        }
+        _isClosed = false;
     }
 
     public void Close()
     {
-        if (!_isClosed)
-        {
-            _isClosed = true;
-            //Change sprite
-        }
+        _isClosed = true;
     }
 }

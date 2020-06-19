@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3876260075202090779}
   - component: {fileID: 8251178190316335296}
-  - component: {fileID: -6575852854111082431}
+  - component: {fileID: 2194797255351868841}
   m_Layer: 0
   m_Name: 004 DecoDoorClosed
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-6575852854111082431
+--- !u!114 &2194797255351868841
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,17 +91,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7677487159394050401}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70a70ea688d0db4fb209ccac5b3993a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c70a3fe0017dcf4789d04cfef88034f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_addBlockFlyers: 0
-  m_addUnblockFlyers: 0
-  m_addBlockGround: 0
-  m_addUnblockGround: 1
-  m_addIsWater: 0
-  m_addIsSolid: 1
-  m_addIsShallow: 0
-  addIsNotShallow: 1
-  m_cancelTileDamage: 0
-  m_addDamage: 0
-  m_spriteID: 0

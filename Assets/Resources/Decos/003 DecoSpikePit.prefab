@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5381464347173096127}
   - component: {fileID: 6331595641031414149}
-  - component: {fileID: -7355783349331510892}
+  - component: {fileID: 8627508666982671302}
   m_Layer: 0
   m_Name: 003 DecoSpikePit
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-7355783349331510892
+--- !u!114 &8627508666982671302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,17 +91,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7155820921803461031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70a70ea688d0db4fb209ccac5b3993a, type: 3}
+  m_Script: {fileID: 11500000, guid: 76b32a8b898920e4fa978ac5c2f35dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_addBlockFlyers: 0
-  m_addUnblockFlyers: 0
-  m_addBlockGround: 0
-  m_addUnblockGround: 0
-  m_addIsWater: 0
-  m_addIsSolid: 1
-  m_addIsShallow: 1
-  addIsNotShallow: 0
-  m_cancelTileDamage: 0
-  m_addDamage: 25
-  m_spriteID: 0

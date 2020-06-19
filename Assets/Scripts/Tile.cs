@@ -28,6 +28,7 @@ public class Tile: AbstractTile
         _isSink = false;
         _damage = 0;
         _decoratorSpriteId = 0;
+        _tileSpriteId = 0;
     }
 
     public override bool IsBlockedFlying
