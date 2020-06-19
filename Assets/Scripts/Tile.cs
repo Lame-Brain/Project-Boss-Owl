@@ -20,7 +20,7 @@ using UnityEngine;
 
 public class Tile: AbstractTile
 {
-    private void Awake()
+    virtual protected void Awake()
     {
         _isBlockedFlying = false;
         _isBlockedGround = false;

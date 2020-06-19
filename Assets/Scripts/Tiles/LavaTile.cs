@@ -1,37 +1,35 @@
 ﻿/**********************************************************************************************************************************************************************************************************************
 * Author:		Brett Roberts
-* Filename:		SpikePitTileDecorator.cs
+* Filename:		LavaTile.cs
 * Date Created: 6/19/2020
 *
-* Class: SpikePitTileDecorator
+* Class: LavaTile
 *
-* Purpose: Defines a spike pit decorator to place on tiles
+* Purpose: Defines attributes for a lava tile
 *   (Concrete Decorator for Tile as part of Decorator Pattern)
 * 
-* Properties:
-*   public override bool IsBlockedGround
-*       Returns whether the door is blocking (closed is blocking, open is not)
 * Methods:
-*  public void Open()
-*   Sets the door to not be closed and changes sprite to an open door
-*   
-*  public void Close()
-*   Sets the door to be closed and changes the sprite to a closed door
+*   Awake()
+*       Instantiates all relevant states inherited from Tile
 ***********************************************************************************************************************************************************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikePitDecorator : TileDecorator
+public class LavaTile : Tile
 {
-    public override int Damage
+    protected override void Awake()
     {
-        get { return base.Damage + CalcDamage(); }
+        base.Awake();
+        _isSink = true;
+        _tileSpriteId = -1;
+        CalculateDamage();
     }
-
-    //Calculate the spike pit will deal
-    protected int CalcDamage()
+    
+    //Calculates damage the lava will deal and assigns it to the damage state
+    protected void CalculateDamage()
     {
-        return 5;
+        //Example code
+        _damage = 5;
     }
 }
