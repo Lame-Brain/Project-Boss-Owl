@@ -8,15 +8,9 @@
 * Purpose: Defines a spike pit decorator to place on tiles
 *   (Concrete Decorator for Tile as part of Decorator Pattern)
 * 
-* Properties:
-*   public override bool IsBlockedGround
-*       Returns whether the door is blocking (closed is blocking, open is not)
 * Methods:
-*  public void Open()
-*   Sets the door to not be closed and changes sprite to an open door
-*   
-*  public void Close()
-*   Sets the door to be closed and changes the sprite to a closed door
+*  public override double CalculateDamage()
+*   Calculates damage the tile deals and returns that value
 ***********************************************************************************************************************************************************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
@@ -24,14 +18,10 @@ using UnityEngine;
 
 public class SpikePitDecorator : TileDecorator
 {
-    public override int Damage
+    //Calculate the spike pit will deal and returns it
+    public override double CalculateDamage()
     {
-        get { return base.Damage + CalcDamage(); }
-    }
-
-    //Calculate the spike pit will deal
-    protected int CalcDamage()
-    {
-        return 5;
+        //Sample code, adds the damage done by the tile to spike decoration
+        return _inner.CalculateDamage() + 3;
     }
 }

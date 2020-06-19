@@ -12,8 +12,9 @@
 *       void Awake()
 * 
 * Methods:
-*           
-***********************************************************************************************************************************************************************************************************************/
+* public override double CalculateDamage()
+*    Calculates damage the tile deals and returns that value
+/**********************************************************************************************************************************************************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,7 +27,6 @@ public class Tile: AbstractTile
         _isBlockedGround = false;
         _isWater = false;
         _isSink = false;
-        _damage = 0;
         _decoratorSpriteId = 0;
         _tileSpriteId = 0;
     }
@@ -51,11 +51,6 @@ public class Tile: AbstractTile
         get { return _isSink; }
     }
 
-    public override int Damage
-    {
-        get { return _damage; }
-    }
-
     public override int DecoratorSpriteId
     {
         get { return _decoratorSpriteId; }
@@ -66,6 +61,12 @@ public class Tile: AbstractTile
     {
         get { return _tileSpriteId; }
         set { _tileSpriteId = value; }
+    }
+
+    //Base damage of a tile is 0
+    public override double CalculateDamage()
+    {
+        return 0;
     }
 }
 

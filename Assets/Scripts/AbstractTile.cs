@@ -9,7 +9,8 @@
 *   (Abstract Component for Tile as part of Decorator Pattern)
 * 
 * Methods:
-*  N/A
+*  public double CalculateDamage()
+*   Calculates damage the tile deals and returns that value
 ***********************************************************************************************************************************************************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
@@ -18,7 +19,6 @@ using UnityEngine;
 abstract public class AbstractTile : MonoBehaviour
 {
     protected bool _isBlockedFlying, _isBlockedGround, _isWater, _isSink;
-    protected int _damage;
     protected int _decoratorSpriteId;
     protected int _tileSpriteId;
 
@@ -31,11 +31,11 @@ abstract public class AbstractTile : MonoBehaviour
     { get; }
     public abstract bool IsSink
     { get; }
-    public abstract int Damage
-    { get; }
     public abstract int DecoratorSpriteId
     { get; set; }
 
     public abstract int TileSpriteId
     { get; set; }
+
+    public abstract double CalculateDamage();
 }

@@ -9,8 +9,10 @@
 *   (Concrete Decorator for Tile as part of Decorator Pattern)
 * 
 * Methods:
-*   Awake()
+*   protected override void Awake()
 *       Instantiates all relevant states inherited from Tile
+*    public override double CalculateDamage()
+*       Calculates damage the tile deals and returns that value
 ***********************************************************************************************************************************************************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
@@ -23,13 +25,12 @@ public class LavaTile : Tile
         base.Awake();
         _isSink = true;
         _tileSpriteId = -1;
-        CalculateDamage();
     }
     
-    //Calculates damage the lava will deal and assigns it to the damage state
-    protected void CalculateDamage()
+    //Calculates damage the lava will deal and returns it
+    public override double CalculateDamage()
     {
-        //Example code
-        _damage = 5;
+        //Sample code
+        return 5;
     }
 }

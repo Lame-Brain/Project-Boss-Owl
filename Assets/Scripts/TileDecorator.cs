@@ -11,6 +11,8 @@
 * Methods:
 *   protected void Construct(AbstractTile tile)
 *       Initializes this instance of the Tile Decorator to a Abstract tile to provide pass through behaviour
+*   public override double CalculateDamage()
+*       Calculates damage the tile deals and returns that value
 ***********************************************************************************************************************************************************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
@@ -45,11 +47,6 @@ public class TileDecorator : AbstractTile
         get { return _inner.IsSink; }
     }
 
-    public override int Damage
-    {
-        get { return _inner.Damage; }
-    }
-
     public override int DecoratorSpriteId
     {
         get { return _inner.DecoratorSpriteId; }
@@ -60,5 +57,10 @@ public class TileDecorator : AbstractTile
     {
         get { return _inner.TileSpriteId; }
         set { _inner.TileSpriteId = value; }
+    }
+
+    public override double CalculateDamage()
+    {
+        return _inner.CalculateDamage();
     }
 }
