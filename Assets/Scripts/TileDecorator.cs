@@ -53,6 +53,12 @@ public class TileDecorator : AbstractTile
     public override int DecoratorSpriteId
     {
         get { return _inner.DecoratorSpriteId; }
-        set { _decoratorSpriteId = value; }
+        set { _inner.DecoratorSpriteId = value; }
+    }
+
+    public override int TileSpriteId
+    {
+        get { return _inner.TileSpriteId; }
+        set { _inner.TileSpriteId = value; }
     }
 }

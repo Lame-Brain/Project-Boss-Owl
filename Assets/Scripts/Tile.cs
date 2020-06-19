@@ -60,5 +60,11 @@ public class Tile: AbstractTile
         get { return _decoratorSpriteId; }
         set { _decoratorSpriteId = value; }
     }
+
+    public override int TileSpriteId
+    {
+        get { return _tileSpriteId; }
+        set { _tileSpriteId = value; }
+    }
 }
 
