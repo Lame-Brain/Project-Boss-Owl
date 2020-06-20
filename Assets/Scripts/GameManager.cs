@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public static GameManager m_instance;
     private MapManager m_mapManager;
     public GameObject m_player;
+    SpriteIdDictionary spriteIdDictionary = SpriteIdDictionary.Instance;
 
     public enum GAME_STATE
     {
