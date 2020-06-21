@@ -25,15 +25,16 @@ public class GameManager : MonoBehaviour
     public const char FILE_DELIMITER = '|';
 
     //Directory Globals
-    public const string DIRECTORY_RESOURCE_TILES = "Tiles";
-    public const string DIRECTORY_RESOURCE_DECORATIONS = "Decos";
+    public const string DIRECTORY_RESOURCE_SPRITES = "Sprites";
+    public const string DIRECTORY_RESOURCE_TILES = "Sprites/Tiles";
+    public const string DIRECTORY_RESOURCE_DECORATIONS = "Sprites/Decos";
     public const string DIRECTORY_CSV_FILES = "Assets/Resources/Files/";
     /******* Const Globals ******/
 
     public static GameManager m_instance;
     private MapManager m_mapManager;
     public GameObject m_player;
-    SpriteIdDictionary spriteIdDictionary = SpriteIdDictionary.Instance;
+    TileDictionary spriteIdDictionary = TileDictionary.Instance;
 
     public enum GAME_STATE
     {
@@ -60,6 +61,8 @@ public class GameManager : MonoBehaviour
         //Testing Map
         //m_mapManager.BuildMap("OverworldTileID.csv", "OverworldDecoID.csv");
         m_mapManager.BuildMap("DunjonTiles.csv", "DunjonDeco.csv");
+
+        spriteIdDictionary.AddAllTiles();
     }
 
     private void Update()

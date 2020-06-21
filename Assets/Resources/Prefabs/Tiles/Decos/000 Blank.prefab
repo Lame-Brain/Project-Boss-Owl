@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1505719489619147022}
   - component: {fileID: 4500745860083463213}
-  - component: {fileID: 4165853096625975980}
   m_Layer: 0
   m_Name: 000 Blank
   m_TagString: Untagged
@@ -26,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9125933544238391239}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7966117, y: 0.60506785, z: -0.6907582}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,26 +81,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4165853096625975980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9125933544238391239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70a70ea688d0db4fb209ccac5b3993a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_addBlockFlyers: 0
-  m_addUnblockFlyers: 0
-  m_addBlockGround: 0
-  m_addUnblockGround: 0
-  m_addIsWater: 0
-  m_addIsSolid: 0
-  m_addIsShallow: 0
-  addIsNotShallow: 0
-  m_cancelTileDamage: 0
-  m_addDamage: 0
-  m_spriteID: 0

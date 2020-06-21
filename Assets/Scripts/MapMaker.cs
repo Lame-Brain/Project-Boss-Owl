@@ -32,7 +32,6 @@ public class MapMaker : MonoBehaviour
         //Load all Tiles and Decorations
         m_tiles = Resources.LoadAll(GameManager.DIRECTORY_RESOURCE_TILES, typeof(GameObject)).Cast<GameObject>().ToArray();
         m_decorations = Resources.LoadAll(GameManager.DIRECTORY_RESOURCE_DECORATIONS, typeof(GameObject)).Cast<GameObject>().ToArray();
-
     }
 
     /**********************************************************************************************************************************************************************************************************************
