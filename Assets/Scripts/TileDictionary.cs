@@ -6,14 +6,14 @@
 * Class: TileDictionary
 *           Singleton
 *
-* Purpose: Wrapper for a dictionary of Tiles stored as Tile with a string path to the prefab as a key
+* Purpose: Wrapper for a dictionary of Tiles stored as Tile with an integer key
 *   (Singleton Pattern)
 * Manager Functions:
 *       private TileDictionary()
 *           Instantiates underlying dictionary
 * Methods:
-*       public int FetchId(string key)
-*           Returns an id value based on the passed in key
+*       public Tile FetchTile(int key)
+*           Returns a tile value based on the passed in key
 *       public void AddAllTiles()
 *           Function to add all tile prefabs to the dictionary. Should be called after dictionary instantiation
 ***********************************************************************************************************************************************************************************************************************/
@@ -26,11 +26,11 @@ using UnityEngine;
 public class TileDictionary
 {
     private static TileDictionary _instance;
-    private Dictionary<string, AbstractTile> _tileDict;
+    private Dictionary<int, AbstractTile> _tileDict;
 
     private TileDictionary()
     {
-        _tileDict = new Dictionary<string, AbstractTile>();
+        _tileDict = new Dictionary<int, AbstractTile>();
     }
 
     public static TileDictionary Instance
@@ -47,22 +47,35 @@ public class TileDictionary
     }
 
     //Wrapper for getter
-    public AbstractTile FetchId(string key)
+    public AbstractTile FetchId(int key)
     {
         return _tileDict[key];
     }
 
-    //Helper function to place all tiles into the dictionary
+    //Places all tiles into the dictionary
     public void AddAllTiles()
     {
-        //Loads all files paths in the prefab directory into an array as the key
-        string[] keys = Directory.GetFiles(GameManager.DIRECTORY_RESOURCES + "\\" + GameManager.DIRECTORY_RESOURCE_TILE_PREFABS, 
+        //Loads all files paths in the prefab directory into an array
+        //Spefically searches for .prefab files
+        string[] prefabFiles = Directory.GetFiles(GameManager.DIRECTORY_RESOURCES + "/" + GameManager.DIRECTORY_RESOURCE_TILE_PREFABS, 
             "*.prefab", SearchOption.AllDirectories);
-        
-        //Uses the keys path to find the tile and uses both itself and that tile to add an entry to the dictionary
-        foreach(string key in keys)
+
+        GameObject[] objs = new GameObject[prefabFiles.Length];
+        //Loads each prefab into the dictionary with a key and sets the key of the associated tile
+        for (int i = 0; i < prefabFiles.Length; ++i)
         {
-            _tileDict.Add(key, Resources.Load<AbstractTile>(key));
+            //Load current tile prefab
+            prefabFiles[i] = prefabFiles[i].Replace("\\", "/");
+            prefabFiles[i] = Path.ChangeExtension(prefabFiles[i], null);
+            prefabFiles[i] = prefabFiles[i].Substring((GameManager.DIRECTORY_RESOURCES + "/").Length);
+
+            objs[i] = Resources.Load<GameObject>(prefabFiles[i]);
+            Object.Instantiate(objs[i]);
+            //Add tile to the dictionary
+            //_tileDict.Add(i, tile);
+
+            //Set the key of the current tile
+            //tile.TileDictKey = i;
         }
     }
 }

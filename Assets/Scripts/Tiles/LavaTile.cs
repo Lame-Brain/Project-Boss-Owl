@@ -9,8 +9,6 @@
 *   (Concrete Decorator for Tile as part of Decorator Pattern)
 * 
 * Methods:
-*   protected override void Awake()
-*       Instantiates all relevant states inherited from Tile
 *    public override double CalculateDamage()
 *       Calculates damage the tile deals and returns that value
 ***********************************************************************************************************************************************************************************************************************/
@@ -20,13 +18,11 @@ using UnityEngine;
 
 public class LavaTile : Tile
 {
-    protected override void Awake()
+    public override bool IsSink
     {
-        base.Awake();
-        _isSink = true;
-        _tileSpriteId = -1;
+        get { return true; }
     }
-    
+
     //Calculates damage the lava will deal and returns it
     public override double CalculateDamage()
     {

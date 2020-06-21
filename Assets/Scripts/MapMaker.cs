@@ -30,8 +30,9 @@ public class MapMaker : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         //Load all Tiles and Decorations
-        m_tiles = Resources.LoadAll(GameManager.DIRECTORY_RESOURCE_TILES, typeof(GameObject)).Cast<GameObject>().ToArray();
-        m_decorations = Resources.LoadAll(GameManager.DIRECTORY_RESOURCE_DECORATIONS, typeof(GameObject)).Cast<GameObject>().ToArray();
+        Debug.Log(GameManager.DIRECTORY_RESOURCE_TILES);
+        //m_tiles = Resources.LoadAll(GameManager.DIRECTORY_RESOURCE_TILES, typeof(GameObject)).Cast<GameObject>().ToArray();
+        //m_decorations = Resources.LoadAll(GameManager.DIRECTORY_RESOURCE_DECORATIONS, typeof(GameObject)).Cast<GameObject>().ToArray();
     }
 
     /**********************************************************************************************************************************************************************************************************************
@@ -48,7 +49,7 @@ public class MapMaker : MonoBehaviour
     {
         for (int y = map.GetLength(1) - 1; y >= 0; --y)
         {
-            for (int x = 0; x < map.GetLength(0); ++x)
+            /*for (int x = 0; x < map.GetLength(0); ++x)
             {
                 //Places a tile of the type specified by the current array index
                 //The y for map is calculated to be as many steps away from 0 as y is steps away from map.Getlength(1)
@@ -59,7 +60,7 @@ public class MapMaker : MonoBehaviour
                 //Place decoration sprite so long as it is not equal to -1 in which case no decoration sprite exists at the index
                 if(map[x, map.GetLength(1) - (y + 1)].DecoratorSpriteId != -1)
                 Instantiate(m_decorations[map[x, map.GetLength(1) - (y + 1)].DecoratorSpriteId], new Vector2(x * GameManager.SCALE_TILES, y * GameManager.SCALE_TILES), Quaternion.identity);
-            }
+            }*/
         }
     }
 

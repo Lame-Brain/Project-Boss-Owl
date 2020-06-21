@@ -8,9 +8,6 @@
 * Purpose: Defines attributes for a shallow water tile
 *   (Concrete Decorator for Tile as part of Decorator Pattern)
 * 
-* Methods:
-*   Awake()
-*       Instantiates all relevant states inherited from Tile
 ***********************************************************************************************************************************************************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
@@ -18,10 +15,8 @@ using UnityEngine;
 
 public class ShallowWaterTile : Tile
 {
-    protected override void Awake()
+    public override bool IsWater
     {
-        base.Awake();
-        _isWater = true;
-        _tileSpriteId = -1;
+        get { return true; }
     }
 }

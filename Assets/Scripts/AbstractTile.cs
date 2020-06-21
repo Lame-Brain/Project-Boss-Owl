@@ -18,9 +18,7 @@ using UnityEngine;
 
 abstract public class AbstractTile : MonoBehaviour
 {
-    protected bool _isBlockedFlying, _isBlockedGround, _isWater, _isSink;
-    protected int _decoratorSpriteId;
-    protected int _tileSpriteId;
+    protected static int _tileDictKey;
 
     //Defines abstract properties for each state to be decorable
     public abstract bool IsBlockedFlying
@@ -31,10 +29,8 @@ abstract public class AbstractTile : MonoBehaviour
     { get; }
     public abstract bool IsSink
     { get; }
-    public abstract int DecoratorSpriteId
-    { get; set; }
 
-    public abstract int TileSpriteId
+    public abstract int TileDictKey
     { get; set; }
 
     public abstract double CalculateDamage();

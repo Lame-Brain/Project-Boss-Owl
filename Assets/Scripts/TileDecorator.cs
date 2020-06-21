@@ -47,16 +47,10 @@ public class TileDecorator : AbstractTile
         get { return _inner.IsSink; }
     }
 
-    public override int DecoratorSpriteId
+    public override int TileDictKey
     {
-        get { return _inner.DecoratorSpriteId; }
-        set { _inner.DecoratorSpriteId = value; }
-    }
-
-    public override int TileSpriteId
-    {
-        get { return _inner.TileSpriteId; }
-        set { _inner.TileSpriteId = value; }
+        get { return _inner.TileDictKey; }
+        set { _inner.TileDictKey = value; }
     }
 
     public override double CalculateDamage()

@@ -21,46 +21,30 @@ using UnityEngine;
 
 public class Tile: AbstractTile
 {
-    virtual protected void Awake()
-    {
-        _isBlockedFlying = false;
-        _isBlockedGround = false;
-        _isWater = false;
-        _isSink = false;
-        _decoratorSpriteId = 0;
-        _tileSpriteId = 0;
-    }
-
     public override bool IsBlockedFlying
     {
-        get { return _isBlockedFlying; }
+        get { return false; }
     }
 
     public override bool IsBlockedGround
     {
-        get { return _isBlockedGround; }
+        get { return false; }
     }
 
     public override bool IsWater
     {
-        get { return _isWater; }
+        get { return false; }
     }
 
     public override bool IsSink
     {
-        get { return _isSink; }
+        get { return false; }
     }
 
-    public override int DecoratorSpriteId
+    public override int TileDictKey
     {
-        get { return _decoratorSpriteId; }
-        set { _decoratorSpriteId = value; }
-    }
-
-    public override int TileSpriteId
-    {
-        get { return _tileSpriteId; }
-        set { _tileSpriteId = value; }
+        get { return _tileDictKey; }
+        set { _tileDictKey = value; }
     }
 
     //Base damage of a tile is 0

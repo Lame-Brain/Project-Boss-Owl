@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3370468476736160092}
   - component: {fileID: 764403381221209082}
   m_Layer: 0
-  m_Name: tilePlainsTree
+  m_Name: 003 tilePlainsTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,9 +94,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ee65ddfcddf764ea2171efeba8902e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_isBlockedFlying: 1
-  m_isBlockedGround: 0
-  m_isWater: 0
-  m_isSink: 0
-  m_isDecorable: 0
-  m_damage: 0

@@ -64,6 +64,9 @@ public class GameManager : MonoBehaviour
         m_mapManager.BuildMap("DunjonTiles.csv", "DunjonDeco.csv");
 
         tileDictionary.AddAllTiles();
+        //Test code
+        LavaTile lavaTile = gameObject.AddComponent<LavaTile>();
+        Debug.Log(lavaTile.TileDictKey);
     }
 
     private void Update()

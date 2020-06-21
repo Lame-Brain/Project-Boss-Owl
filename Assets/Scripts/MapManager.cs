@@ -94,7 +94,7 @@ public class MapManager : MonoBehaviour
             currTileLine = tileLines[y].Split(GameManager.FILE_DELIMITER);
             currDecoLine = decoLines[y].Split(GameManager.FILE_DELIMITER);
 
-            for (int x = 0; x < tileLines[0].Split(GameManager.FILE_DELIMITER).Length; ++x)
+           /* for (int x = 0; x < tileLines[0].Split(GameManager.FILE_DELIMITER).Length; ++x)
             {
                 //AddComponent for each tile in the array for allocation and set its location
                 finalArray[x, y] = gameObject.AddComponent<Tile>();
@@ -102,7 +102,7 @@ public class MapManager : MonoBehaviour
 
                 //AddComponent for each decoration
                 finalArray[x, y].DecoratorSpriteId = System.Convert.ToInt32(currDecoLine[x]);
-            }
+            }*/
         }
 
         return finalArray;

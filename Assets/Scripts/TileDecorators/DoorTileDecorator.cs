@@ -11,8 +11,6 @@
 * Properties:
 *   public override bool IsBlockedGround
 *       Returns whether the door is blocking (closed is blocking, open is not)
-*   public DecoratorSpriteId
-*       Returns the spriteId for a closed door if the door is closed, or an open one if the door is opened
 * Methods:
 *  public void Open()
 *   Sets the door to not be closed and changes sprite to an open door
@@ -36,24 +34,6 @@ public class DoorTileDecorator : TileDecorator
     public override bool IsBlockedGround
     {
         get { return _isClosed; }
-    }
-
-    //******To be fully implemented
-    public override int DecoratorSpriteId
-    {
-        get
-        {
-            //Return the closed door sprite id
-            if (_isClosed)
-            {
-                return -1;
-            }
-            //Return the open door sprite id
-            else
-            {
-                return -1;
-            }
-        }
     }
 
     public void Open()
