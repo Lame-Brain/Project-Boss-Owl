@@ -28,7 +28,6 @@ public class Player : Character
     override protected void Update()
     {
         GameManager.m_instance.m_player.transform.position = m_pos;
-        Debug.Log("Name of Obj: " + gameObject.name + " and X of Obj: " + transform.position.x);
     }
 
     override protected void MoveChar(Move_Direction mvDir)

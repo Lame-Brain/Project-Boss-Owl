@@ -6,20 +6,21 @@
 * Class: TileDictionary
 *           Singleton
 *
-* Purpose: Wrapper for a dictionary of Tiles stored as Tile with a string key
+* Purpose: Wrapper for a dictionary of Tiles stored as Tile with a string path to the prefab as a key
 *   (Singleton Pattern)
 * Manager Functions:
-*       public TileDictionary()
-*           Adds all tiles into the dictionary with an appropriate key
+*       private TileDictionary()
+*           Instantiates underlying dictionary
 * Methods:
 *       public int FetchId(string key)
 *           Returns an id value based on the passed in key
-*       private void AddAllTiles()
-*           Helper function to add all tile prefabs to the dictionary
+*       public void AddAllTiles()
+*           Function to add all tile prefabs to the dictionary. Should be called after dictionary instantiation
 ***********************************************************************************************************************************************************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using UnityEngine;
 
 public class TileDictionary
@@ -27,11 +28,9 @@ public class TileDictionary
     private static TileDictionary _instance;
     private Dictionary<string, AbstractTile> _tileDict;
 
-    //Places all tiles into the dictionary
     private TileDictionary()
     {
         _tileDict = new Dictionary<string, AbstractTile>();
-        //AddAllTiles();
     }
 
     public static TileDictionary Instance
@@ -56,14 +55,14 @@ public class TileDictionary
     //Helper function to place all tiles into the dictionary
     public void AddAllTiles()
     {
-        //Loads all tiles in as AbstractTiles to an array
-        AbstractTile[] tiles;
-        tiles = Resources.LoadAll(GameManager.DIRECTORY_RESOURCE_SPRITES, typeof(AbstractTile)).Cast<AbstractTile>().ToArray();
-
-        //Add each tile to the dictionary
-        foreach (AbstractTile tile in tiles)
+        //Loads all files paths in the prefab directory into an array as the key
+        string[] keys = Directory.GetFiles(GameManager.DIRECTORY_RESOURCES + "\\" + GameManager.DIRECTORY_RESOURCE_TILE_PREFABS, 
+            "*.prefab", SearchOption.AllDirectories);
+        
+        //Uses the keys path to find the tile and uses both itself and that tile to add an entry to the dictionary
+        foreach(string key in keys)
         {
-            _tileDict.Add("test", tile);
+            _tileDict.Add(key, Resources.Load<AbstractTile>(key));
         }
     }
 }
